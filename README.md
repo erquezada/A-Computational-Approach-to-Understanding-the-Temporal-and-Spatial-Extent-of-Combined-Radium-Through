@@ -4,12 +4,15 @@ Description
 A brief description of the repository and its purpose.
 
 Table of Contents
-Installation
-Usage
-Contributing
-License
-Installation
-A step-by-step guide on how to install and set up the project locally. Include any dependencies or prerequisites that need to be installed.
+1) Well Information Populator.py
+2) Radium Clean Negative Numbers and Unique Well ID Filter
+3) File Merger
+4) First Bedrock Filter
+5) Sort Wells
+6) Timestamp Cleaner
+7) Time Period Selection
+8) Maximum Contamination
+9) Data Modeling
 
 Usage
 Explain how to use the project and provide examples or code snippets if necessary. Include any configuration or environment variables that need to be set.

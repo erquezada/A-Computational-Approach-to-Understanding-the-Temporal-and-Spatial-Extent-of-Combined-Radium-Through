@@ -1,6 +1,5 @@
 # GroundWater-Research
 
-Description
 This repository contains the files related to my Computational GroundWater Research conducted as part of the REU program at UW-Madison. Here, you will find instructions on how to execute the files to explore the work I have done.
 
 Table of Contents

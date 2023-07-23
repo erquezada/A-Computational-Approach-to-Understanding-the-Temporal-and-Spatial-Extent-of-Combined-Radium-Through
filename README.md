@@ -13,34 +13,6 @@ Table of Contents
 8) Maximum Contamination
 9) Data Modeling
 
-
-Well Information Populator
-Instructions and details on how to execute the Well Information Populator file.
-
-Radium Clean Negative Numbers and Unique Well ID Filter
-Instructions and details on how to execute the Radium Clean Negative Numbers and Unique Well ID Filter file
-
-File Merger
-Instructions and details on how to execute the File Merger file
-
-First Bedrock Filter
-Instructions and details on how to execute the First Bedrock Filter file
-
-Sort Wells
-Instructions and details on how to execute the Sort Wells script file
-
-Timestamp Cleaner
-Instructions and details on how to execute the Timestamp Cleaner script file
-
-Time Period Selection
-Instructions and details on how to execute the Time Period Selection script file
-
-Maximum Contamination
-Instructions and details on how to execute the Maximum Contamination script file
-
-Data Modeling
-Instructions and details on how to execute the Data Modeling process file
-
 Contributing
 Thank you for your interest in contributing to this project! Contributions are highly appreciated and help make the project better for everyone. Here are some guidelines on how you can contribute:
 

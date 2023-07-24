@@ -1,4 +1,4 @@
-# GroundWater-Research
+# Data Analysis on the Characterization Ra Contaminated Groundwater in Wisconsin
 
 This repository contains the files related to my Computational GroundWater Research conducted as part of the REU program at UW-Madison. Here, you will find instructions on how to execute the files to explore the work I have done.
 

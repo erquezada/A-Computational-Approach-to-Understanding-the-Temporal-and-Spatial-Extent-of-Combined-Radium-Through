@@ -5,10 +5,10 @@ This repository contains the files related to my computational groundwater resea
 **Table of Contents**
 1) Well Information Populator
 2) Negative Radiumn Concentration and Unique Well Number Cleaner
-3) File Merger
-4) First Bedrock Filter
-5) Maximum Contamination
-6) Data Modeling
+3) Table Merger
+4) Sand and Gravel Well Filter
+5) Annual Maximum Radium Contamination Filter
+6) Theil-Sen Regression Analysis Modeler
 
 Contributing
 Thank you for your interest in contributing to this project! Contributions are highly appreciated and help make the project better for everyone. Here are some guidelines on how you can contribute:

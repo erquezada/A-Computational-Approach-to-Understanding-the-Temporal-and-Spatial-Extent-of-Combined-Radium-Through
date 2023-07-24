@@ -1,10 +1,10 @@
 # Data Analysis on the Characterization Ra Contaminated Groundwater in Wisconsin
 
-This repository contains the files related to my Computational GroundWater Research conducted as part of the REU program at UW-Madison. Here, you will find instructions on how to execute the files to explore the work I have done.
+This repository contains the files related to my computational groundwater research conducted as part of the REU program at UW-Madison. Here, you will find instructions on how to execute the files to explore the work I have done.
 
-Table of Contents
+**Table of Contents**
 1) Well Information Populator
-2) Radium Clean Negative Numbers and Unique Well ID Filter
+2) Negative Radiumn Concentration and Unique Well Number Cleaner
 3) File Merger
 4) First Bedrock Filter
 5) Maximum Contamination

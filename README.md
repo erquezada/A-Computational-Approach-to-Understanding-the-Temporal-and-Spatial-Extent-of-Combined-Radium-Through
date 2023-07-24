@@ -7,11 +7,8 @@ Table of Contents
 2) Radium Clean Negative Numbers and Unique Well ID Filter
 3) File Merger
 4) First Bedrock Filter
-5) Sort Wells
-6) Timestamp Cleaner
-7) Time Period Selection
-8) Maximum Contamination
-9) Data Modeling
+5) Maximum Contamination
+6) Data Modeling
 
 Contributing
 Thank you for your interest in contributing to this project! Contributions are highly appreciated and help make the project better for everyone. Here are some guidelines on how you can contribute:

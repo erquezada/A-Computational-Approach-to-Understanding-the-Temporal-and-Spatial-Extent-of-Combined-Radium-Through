@@ -34,7 +34,7 @@ def process_unique_well_numbers(df, column_name):
 file_path = 'Ra Contamination in Public Water Supplies.xlsx'
 sheet_name = 'All wells Ra DNR'
 column_name = 'Measured Amount'
-well_number_column = 'WI Unique Well No'
+well_number_column = 'WI_UNIQUE_WELL_NO'
 
 # Create an instance of ExcelDataReader
 data_reader = ExcelDataReader()

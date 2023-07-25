@@ -48,7 +48,7 @@ def main():
         data = handle_missing_data(data)
 
         # Save the updated data to a new file
-        data.to_excel('updated_data.xlsx', index=False)
+        data.to_excel('populated_all_wisconsin_wells.xlsx', index=False)
 
     except FileNotFoundError:
         print("The file All_Wisconsin_Wells_DNR.xlsx does not exist.")

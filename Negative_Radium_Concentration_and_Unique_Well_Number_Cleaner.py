@@ -49,7 +49,7 @@ print(column_data)
 processed_data = process_excel_file(file_path, sheet_name, column_name, well_number_column)
 
 # Save the updated DataFrame to a new Excel file
-output_file_path = 'Updated_Data.xlsx'
+output_file_path = 'filtered_radium_data_dnr.xlsx'
 processed_data.to_excel(output_file_path, index=False)
 
 print("\nNew Excel file has been generated:", output_file_path)

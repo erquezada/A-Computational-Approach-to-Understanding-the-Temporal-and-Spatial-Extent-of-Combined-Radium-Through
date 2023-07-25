@@ -11,7 +11,7 @@ def merge_excel_files(file1, file2, sheet1, sheet2, output_file):
         df2 = excel_file2.parse(sheet2)
 
         # Merge the dataframes based on the 'Well Number' column
-        merged_df = pd.merge(df1, df2, on='WI Unique Well No', how='inner')
+        merged_df = pd.merge(df1, df2, on='WI_UNIQUE_WELL_NO', how='inner')
 
         # Save the merged dataframe to a new Excel file
         merged_df.to_excel(output_file, index=False)
@@ -25,7 +25,7 @@ def main():
     # Example usage
     file1 = 'Updated_Radium_Data.xlsx'
     file2 = 'Sand and Gravel filtered DNR.xlsx'
-    sheet1 = 'Radium'
+    sheet1 = 'Sheet1'
     sheet2 = 'Sheet1'
     output_file = 'All Wells Ra DNR Merged version 2.xlsx'
 

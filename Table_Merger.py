@@ -24,7 +24,7 @@ def merge_excel_files(file1, file2, sheet1, sheet2, output_file):
 def main():
     # Example usage
     file1 = 'populated_all_wisconsin_wells.xlsx'
-    file2 = 'Sand and Gravel filtered DNR.xlsx'
+    file2 = 'filtered_radium_data_dnr.xlsx'
     sheet1 = 'Sheet1'
     sheet2 = 'Sheet1'
     output_file = 'All Wells Ra DNR Merged version 2.xlsx'

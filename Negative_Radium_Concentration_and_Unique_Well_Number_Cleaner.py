@@ -32,7 +32,7 @@ def process_unique_well_numbers(df, column_name):
 
 # Specify the file path, sheet name, and column name
 file_path = 'Ra Contamination in Public Water Supplies.xlsx'
-sheet_name = 'All wells Ra DNR'
+sheet_name = 'All Ra Wells'
 column_name = 'Measured Amount'
 well_number_column = 'WI_UNIQUE_WELL_NO'
 

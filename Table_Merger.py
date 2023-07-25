@@ -27,7 +27,7 @@ def main():
     file2 = 'filtered_radium_data_dnr.xlsx'
     sheet1 = 'Sheet1'
     sheet2 = 'Sheet1'
-    output_file = 'All Wells Ra DNR Merged version 2.xlsx'
+    output_file = 'All Wells Ra DNR Merged.xlsx'
 
     merge_excel_files(file1, file2, sheet1, sheet2, output_file)
 

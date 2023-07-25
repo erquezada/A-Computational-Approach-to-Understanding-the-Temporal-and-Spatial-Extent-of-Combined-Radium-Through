@@ -23,7 +23,7 @@ def merge_excel_files(file1, file2, sheet1, sheet2, output_file):
 
 def main():
     # Example usage
-    file1 = 'Updated_Radium_Data.xlsx'
+    file1 = 'populated_all_wisconsin_wells.xlsx'
     file2 = 'Sand and Gravel filtered DNR.xlsx'
     sheet1 = 'Sheet1'
     sheet2 = 'Sheet1'

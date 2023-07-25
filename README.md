@@ -1,4 +1,5 @@
-# Radium Presence in Wisconsin's Groundwater: A Temporal and Spatial Analysis
+# A Computational Approach to Understanding the Temporal and Spatial Extent of Combined Radium Throughout Wisconsin’s Cambrian-Ordovician Aquifer System
+
 
 This repository contains the files related to my computational groundwater research conducted as part of the REU program at UW-Madison. Here, you will find instructions on how to execute the files to explore the work I have done.
 

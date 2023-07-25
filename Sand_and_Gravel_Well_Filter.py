@@ -20,10 +20,10 @@ def delete_empty_cells(file_name, sheet_name, column_name, output_file_name):
 
 def main():
     # Example usage
-    file_name = 'Filtered_Wisconsin_Wells_DNR.xlsx'
+    file_name = 'merged_all_wells_ra_dnr.xlsx'
     sheet_name = 'Sheet1'
     column_name = 'FIRST_BEDROCK_FT'
-    output_file_name = 'Sand and Gravel filtered DNR.xlsx'
+    output_file_name = 'filtered_sand_and_gravel_wells_dnr.xlsx'
 
     delete_empty_cells(file_name, sheet_name, column_name, output_file_name)
 

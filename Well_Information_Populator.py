@@ -40,12 +40,7 @@ def handle_missing_data(data):
 def main():
     try:
         # Load the data into a DataFrame
-        # Insert proper file name below. Must be in the format as below
-        file_path = "/Users/erquezada/Desktop/All_Wisconsin_Wells_DNR.xlsx"
-        # Get the sheet name from the user
-        sheet_name = input("Enter the sheet name you want to work with: ")
-
-        data = pd.read_excel(file_path, sheet_name=sheet_name)
+        data = pd.read_excel('All_Wisconsin_Wells_DNR.xlsx')
 
         # Sort the data by WI Unique number
         data = data.sort_values('WI_UNIQUE_WELL_NO')
@@ -56,7 +51,7 @@ def main():
         data.to_excel('updated_data.xlsx', index=False)
 
     except FileNotFoundError:
-        print(f"The file {file_path} does not exist.")
+        print("The file All_Wisconsin_Wells_DNR.xlsx does not exist.")
     except Exception as e:
         print(f"An error occurred: {e}")
 

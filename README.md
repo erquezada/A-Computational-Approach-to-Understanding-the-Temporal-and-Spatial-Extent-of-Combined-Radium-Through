@@ -11,6 +11,7 @@ This repository contains the files related to my computational groundwater resea
 5) Annual Maximum Radium Contamination Filter
 6) Theil-Sen Regression Analysis Modeler
 
+**Instructions**
 Contributing
 Thank you for your interest in contributing to this project! Contributions are highly appreciated and help make the project better for everyone. Here are some guidelines on how you can contribute:
 

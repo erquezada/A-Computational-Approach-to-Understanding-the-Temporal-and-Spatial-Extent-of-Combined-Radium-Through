@@ -5,7 +5,7 @@ This repository contains the files related to my computational groundwater resea
 
 **Table of Contents**
 1) Well Information Populator
-2) Negative Radiumn Concentration and Unique Well Number Cleaner
+2) Negative Radium Concentration and Unique Well Number Cleaner
 3) Table Merger
 4) Sand and Gravel Well Filter
 5) Annual Maximum Radium Contamination Filter

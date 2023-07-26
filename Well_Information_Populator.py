@@ -1,6 +1,6 @@
 import pandas as pd
 
-def handle_missing_data(data):
+def well_data_populator(data):
     # Iterate over each row in the DataFrame
     for index, row in data.iterrows():
         current_wi_unique = row['WI_UNIQUE_WELL_NO']
@@ -45,7 +45,7 @@ def main():
         # Sort the data by WI Unique number
         data = data.sort_values('WI_UNIQUE_WELL_NO')
 
-        data = handle_missing_data(data)
+        data = well_data_populator(data)
 
         # Save the updated data to a new file
         data.to_excel('populated_all_wisconsin_wells.xlsx', index=False)

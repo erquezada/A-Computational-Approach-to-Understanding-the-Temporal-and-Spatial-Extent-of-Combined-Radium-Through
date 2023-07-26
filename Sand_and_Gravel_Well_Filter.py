@@ -1,6 +1,6 @@
 import pandas as pd
 
-def delete_empty_cells(file_name, sheet_name, column_name, output_file_name):
+def first_bedrock_filter(file_name, sheet_name, column_name, output_file_name):
     try:
         # Read the Excel file
         df = pd.read_excel(file_name, sheet_name=sheet_name)
@@ -25,7 +25,7 @@ def main():
     column_name = 'FIRST_BEDROCK_FT'
     output_file_name = 'filtered_sand_and_gravel_wells_dnr.xlsx' #file name
 
-    delete_empty_cells(file_name, sheet_name, column_name, output_file_name)
+    first_bedrock_filter(file_name, sheet_name, column_name, output_file_name)
 
 if __name__ == "__main__":
     main()

@@ -1,22 +1,37 @@
+from pathlib import Path
+
 import pandas as pd
+from tqdm import tqdm
 
-def first_bedrock_filter(file_name, sheet_name, column_name, output_file_name):
-    try:
-        # Read the Excel file
-        df = pd.read_excel(file_name, sheet_name=sheet_name)
+def first_bedrock_filter(
+    file_name: str,
+    sheet_name: str,
+    column_name: str,
+    output_file_name: str,
+) -> None:
+    input_path = Path(file_name)
+    output_path = Path(output_file_name)
 
-        # Delete rows with empty cells in the specified column
-        df.dropna(subset=[column_name], inplace=True)
+    if not input_path.exists():
+        raise FileNotFoundError(f"The file does not exist: {input_path}")
 
-        # Save the modified dataframe to a new Excel file
-        df.to_excel(output_file_name, index=False)
+    df = pd.read_excel(input_path, sheet_name=sheet_name)
 
-        print(f"Empty cells deleted in column '{column_name}' in sheet '{sheet_name}'.")
-        print(f"Modified output saved to '{output_file_name}'.")
-    except FileNotFoundError:
-        print(f"The file {file_name} does not exist.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+    if column_name not in df.columns:
+        raise KeyError(f"Column not found: {column_name}")
+
+    with tqdm(total=3, desc="Filtering wells", unit="step") as progress:
+        progress.update(1)
+
+        filtered_df = df.dropna(subset=[column_name]).reset_index(drop=True)
+        progress.update(1)
+
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        filtered_df.to_excel(output_path, index=False)
+        progress.update(1)
+
+    print(f"Filtered {len(df) - len(filtered_df)} rows with missing '{column_name}'.")
+    print(f"Modified output saved to '{output_path}'.")
 
 def main():
     # Example usage

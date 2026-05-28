@@ -1,0 +1,51 @@
+Radium Data Analysis Report
+===========================
+
+Rows analyzed: 1,218
+Unique wells: 450
+Year range: 1988-2023
+
+Combined Radium Summary
+-----------------------
+Mean: 5.654 pCi/L
+Median: 5.618 pCi/L
+Minimum: 0.000 pCi/L
+Maximum: 25.800 pCi/L
+
+MCL Analysis
+------------
+MCL used: 5.0 pCi/L
+Samples above MCL: 692
+Exceedance rate: 56.81%
+
+Top 10 Counties by Mean Radium
+------------------------------
+county
+Green Lake     7.962667
+Winnebago      7.453591
+Calumet        7.377762
+Brown          6.964203
+Racine         6.905235
+Buffalo        6.900000
+Marinette      6.844207
+Fond du Lac    6.817162
+Washington     6.806818
+Outagamie      6.655965
+
+Top 10 Years by Mean Radium
+---------------------------
+year
+1991    8.800000
+1995    8.520000
+2019    7.419037
+2017    6.607245
+2018    6.544057
+2000    6.513889
+2023    6.319800
+2016    6.224857
+2020    6.040047
+2022    5.935548
+
+Regression Outputs
+------------------
+Regression models are saved in the regression folder inside the output directory.

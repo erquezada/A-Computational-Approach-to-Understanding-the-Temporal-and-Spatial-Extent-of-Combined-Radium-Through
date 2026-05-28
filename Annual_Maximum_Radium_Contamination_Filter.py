@@ -1,29 +1,31 @@
-import os
-import numpy as np
+from pathlib import Path
+
 import pandas as pd
+from tqdm import tqdm
 
-def read_excel_file(file_path, sheet_name=None):
-    try:
-  
-        df = pd.read_excel(file_path, sheet_name=sheet_name, engine='openpyxl', parse_dates=['Sample Date'])
-            # Ensure all the datetime objects are timezone unaware
-        for col in df.select_dtypes(include=[np.datetime64]):
-            if df[col].dtype.name == 'datetime64[ns, tz]':
-                df[col] = df[col].dt.tz_localize(None)
-        return df
-    except (FileNotFoundError, IsADirectoryError, PermissionError) as e:
-        print(f"File not found or permission denied: {e}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-    return None
+def read_excel_file(file_path: Path, sheet_name: str | None = None) -> pd.DataFrame:
+    if not file_path.exists():
+        raise FileNotFoundError(f"The file does not exist: {file_path}")
 
-def wells_sampled(df):
-    df['Sample Date'] = pd.to_datetime(df['Sample Date'])
-    df['Year'] = df['Sample Date'].dt.year
-    df.sort_values(['WI_UNIQUE_WELL_NO', 'Year', 'Measured Amount'], ascending=[True, True, False], inplace=True)
-    df.drop_duplicates(['WI_UNIQUE_WELL_NO', 'Year'], keep='first', inplace=True)
-    df['Count'] = df.groupby(['WI_UNIQUE_WELL_NO', 'Year'])['Measured Amount'].transform('count')
+    df = pd.read_excel(file_path, sheet_name=sheet_name, engine="openpyxl", parse_dates=["Sample Date"])
+
+    # Make datetime columns timezone-naive for consistency
+    for col in df.select_dtypes(include=["datetime64[ns, tz]"]):
+        df[col] = df[col].dt.tz_localize(None)
+
     return df
+
+def wells_sampled(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    df["Sample Date"] = pd.to_datetime(df["Sample Date"], errors="coerce")
+    df["Year"] = df["Sample Date"].dt.year
+
+    # Keep only the highest measured amount per well-year
+    idx = df.groupby(["WI_UNIQUE_WELL_NO", "Year"])["Measured Amount"].idxmax()
+    result = df.loc[idx].copy()
+    result["Count"] = df.groupby(["WI_UNIQUE_WELL_NO", "Year"])['Measured Amount'].transform("count").loc[idx].astype(int)
+    result.reset_index(drop=True, inplace=True)
+    return result
 
 def main():
     file_path = "filtered_sand_and_gravel_wells_dnr.xlsx"
@@ -31,22 +33,21 @@ def main():
     sheet_name = "Sheet1"
     
 
-    df = read_excel_file(file_path, sheet_name=sheet_name)
+    input_path = Path(file_path)
+    output_path = Path(__file__).resolve().parent / "filtered_annual_maximum_radium.xlsx"
 
-    if df is not None:
+    with tqdm(total=3, desc="Annual max radium", unit="step") as progress:
+        df = read_excel_file(input_path, sheet_name=sheet_name)
+        progress.update(1)
+
         wells_data = wells_sampled(df)
-        print("Updated wells in dataset:")
-        print(wells_data)
+        progress.update(1)
 
-        # Get the directory of the script
-        script_dir = os.path.dirname(os.path.realpath(__file__))
+        wells_data.to_excel(output_path, index=False)
+        progress.update(1)
 
-        # Write data to an Excel file
-        output_file_name = os.path.join(script_dir, f"filtered_annual_maximum_radium.xlsx")
-        wells_data.to_excel(output_file_name, index=False)
-        print(f"Updated wells data has been written to '{output_file_name}'.")
-    else:
-        print(f"Failed to read data from {file_path}")
+    print(f"Updated wells in dataset: {len(wells_data)} rows")
+    print(f"Saved annual maximum radium data to '{output_path}'.")
 
 if __name__ == "__main__":
     main()

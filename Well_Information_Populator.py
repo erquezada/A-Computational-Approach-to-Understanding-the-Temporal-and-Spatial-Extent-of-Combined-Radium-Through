@@ -40,7 +40,7 @@ def well_data_populator(data):
 def main():
     try:
         # Load the data into a DataFrame
-        data = pd.read_excel('All_Wisconsin_Wells_DNR.xlsx')
+        data = pd.read_excel('University of Wisconsin Water Science Lab Docs/Savannah/All_Wisconsin_Wells_DNR.xlsx')
 
         # Sort the data by WI Unique number
         data = data.sort_values('WI_UNIQUE_WELL_NO')

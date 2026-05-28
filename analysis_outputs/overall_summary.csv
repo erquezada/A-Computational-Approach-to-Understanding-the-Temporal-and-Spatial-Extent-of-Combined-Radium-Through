@@ -1,0 +1,11 @@
+metric,value
+rows,1218.0
+unique_wells,450.0
+start_year,1988.0
+end_year,2023.0
+mean_radium,5.65432183908046
+median_radium,5.618
+max_radium,25.8
+mcl,5.0
+exceedance_count,692.0
+exceedance_rate,0.5681444991789819

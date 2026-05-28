@@ -1,50 +1,56 @@
-# A Computational Approach to Understanding the Temporal and Spatial Extent of Combined Radium Throughout Wisconsin’s Cambrian-Ordovician Aquifer System
+# A Computational Approach to Understanding the Temporal and Spatial Extent of Combined Radium Through Wisconsin’s Cambrian-Ordovician Aquifer System
 
+This repository contains a computational groundwater research workflow for analyzing combined radium measurements in Wisconsin wells, with emphasis on the Cambrian-Ordovician aquifer system.
 
-This repository contains the files related to my computational groundwater research conducted as part of the REU program at UW-Madison. Here, you will find instructions on how to execute the files to explore the work I have done.
+The project includes data cleaning, well filtering, table merging, annual maximum radium extraction, exploratory data analysis, visualization, and regression modeling.
 
-**Table of Contents**
-1) Well Information Populator
-2) Negative Radium Concentration and Unique Well Number Cleaner
-3) Table Merger
-4) Sand and Gravel Well Filter
-5) Annual Maximum Radium Contamination Filter
-6) Theil-Sen Regression Analysis Modeler
+## Project Overview
 
-**Instructions**
+Combined radium is regulated in drinking water because elevated concentrations may pose long-term health risks. This project uses Python and R-based workflows to investigate patterns in measured radium concentrations across Wisconsin well data.
 
-Contributing
-Thank you for your interest in contributing to this project! Contributions are highly appreciated and help make the project better for everyone. Here are some guidelines on how you can contribute:
+The workflow focuses on:
 
-Pull Requests
-If you have a specific improvement, bug fix, or new feature you would like to add, you can submit a pull request. Follow these steps:
+- Cleaning radium concentration records
+- Removing invalid or negative measurements
+- Merging well and contaminant datasets
+- Filtering wells by aquifer and geologic conditions
+- Extracting annual maximum radium values
+- Visualizing temporal and spatial patterns
+- Modeling trends using regression analysis
 
-Fork the repository to your own GitHub account.
-Create a new branch from the main branch for your changes.
-Make your desired changes to the codebase.
-Test your changes thoroughly to ensure they work as intended.
-Commit your changes with clear and descriptive commit messages.
-Push your changes to your forked repository.
-Open a pull request in this repository and provide a detailed explanation of your changes.
-The pull request will be reviewed, and any necessary feedback or adjustments will be provided. Once your changes are approved, they will be merged into the main repository.
+## Repository Contents
 
-Reporting Issues
-If you encounter any issues or bugs while using the project, please report them. Follow these steps to submit an issue:
+| File or Folder | Description |
+|---|---|
+| `UW.ipynb` | Main notebook used during research development and exploration |
+| `Well_Information_Populator.py` | Populates missing well-related information using previous or replacement well references |
+| `Negative_Radium_Concentration_and_Unique_Well_Number_Cleaner.py` | Cleans radium records and handles invalid measurements or well identifiers |
+| `Table_Merger.py` | Merges well information and radium contaminant datasets |
+| `Sand_and_Gravel_Well_Filter.py` | Filters out sand and gravel wells from the dataset |
+| `Annual_Maximum_Radium_Contamination_Filter.py` | Extracts annual maximum radium values |
+| `Theil-Sen_Regression_Analysis_Modeler.r` | R script for Theil-Sen regression analysis |
+| `radium_analysis.py` | Python data analysis and visualization script |
+| `radium_analysis_with_excel.py` | Python analysis script configured for Excel input |
+| `radium_analysis_with_regression.py` | Python script with summary statistics, visualizations, and regression models |
+| `analysis_outputs/` | Generated summary tables, plots, reports, and regression outputs |
+| `radium_analysis_with_regression_outputs/` | Additional generated analysis outputs |
 
-Go to the Issues tab in this repository.
-Click on the "New Issue" button.
-Provide a clear and descriptive title for the issue.
-In the issue description, include steps to reproduce the problem, expected behavior, and any relevant information about your environment.
-Add any screenshots or error messages that can help understand the issue better.
-Once the issue is submitted, it will be reviewed by the project maintainers, who will work towards resolving it.
+## Data Files
 
-Suggesting Improvements
-If you have ideas or suggestions for improving the project, you can submit them as well. Follow these steps to suggest an improvement:
+This repository includes Excel datasets used during the analysis. These files contain cleaned, filtered, or merged versions of the original well and radium records.
 
-Go to the Issues tab in this repository.
-Click on the "New Issue" button.
-Provide a clear and concise title for the improvement suggestion.
-Describe your suggestion in detail, explaining why it would be beneficial and any implementation ideas you may have.
-Your improvement suggestion will be reviewed and discussed by the project maintainers and the community.
+Important data files include:
 
-We appreciate all contributions, whether they are code-related, issue reports, or improvement suggestions. Your help is valuable in making this project the best it can be. Thank you for your support!
+- `filtered_annual_maximum_radium.xlsx`
+- `filtered_radium_data_dnr.xlsx`
+- `filtered_sand_and_gravel_wells_dnr.xlsx`
+- `merged_all_wells_ra_dnr.xlsx`
+
+Before reusing or redistributing the data, verify that the source data can be shared publicly and cite the original data provider when applicable.
+
+## Main Analysis Script
+
+The most complete Python script is:
+
+```bash
+radium_analysis_with_regression.py

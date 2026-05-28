@@ -3,8 +3,8 @@
 Dep. Variable:        measured_amount   R-squared:                       0.161
 Model:                            OLS   Adj. R-squared:                  0.157
 Method:                 Least Squares   F-statistic:                     38.71
-Date:                Wed, 27 May 2026   Prob (F-statistic):           3.56e-43
-Time:                        19:18:04   Log-Likelihood:                -3152.2
+Date:                Thu, 28 May 2026   Prob (F-statistic):           3.56e-43
+Time:                        15:45:37   Log-Likelihood:                -3152.2
 No. Observations:                1218   AIC:                             6318.
 Df Residuals:                    1211   BIC:                             6354.
 Df Model:                           6                                         
